@@ -1,0 +1,11 @@
+name: azp-agent-win
+services:
+  azp-agent-win:
+    container_name: azp-agent-win
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - path: .env
+        required: false
+    
