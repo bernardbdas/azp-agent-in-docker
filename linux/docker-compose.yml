@@ -2,33 +2,49 @@ name: azp-agent-linux
 services:
   azp-agent-linux-0:
     container_name: azp-agent-linux-0
+    image: azp-agent-linux:latest
     build:
       context: .
       dockerfile: Dockerfile
     env_file:
       - path: .env
-        required: false
+        required: true
     environment:
       - AZP_AGENT_NAME=azp-agent-linux-0
 
   azp-agent-linux-1:
     container_name: azp-agent-linux-1
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: azp-agent-linux:latest
     env_file:
       - path: .env
-        required: false
+        required: true
     environment:
       - AZP_AGENT_NAME=azp-agent-linux-1
 
   azp-agent-linux-2:
     container_name: azp-agent-linux-2
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: azp-agent-linux:latest
     env_file:
       - path: .env
-        required: false
+        required: true
     environment:
       - AZP_AGENT_NAME=azp-agent-linux-2
+ 
+  azp-agent-linux-3:
+    container_name: azp-agent-linux-3
+    image: azp-agent-linux:latest
+    env_file:
+      - path: .env
+        required: true
+    environment:
+      - AZP_AGENT_NAME=azp-agent-linux-3
+ 
+  azp-agent-linux-4:
+    container_name: azp-agent-linux-4
+    image: azp-agent-linux:latest
+    env_file:
+      - path: .env
+        required: true
+    environment:
+      - AZP_AGENT_NAME=azp-agent-linux-4
+

@@ -1,4 +1,4 @@
-FROM ubuntu:latest as azp-agent-linux
+FROM ubuntu:22.04 as azp-agent-linux
 
 RUN apt update -y && apt upgrade -y && apt install curl git jq libicu70 -y
 
